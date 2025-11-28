@@ -78,7 +78,7 @@ if st.button("Predict"):
         # Appel API
         url = 'https://taxifare-262006090037.europe-west1.run.app/predict'
         try:
-            response = requests.get(url, params=params, timeout=10)
+            response = requests.get(url, params=params, timeout=180)
             if response.status_code == 200:
                 prediction = response.json().get("fare")
                 if prediction is not None:
